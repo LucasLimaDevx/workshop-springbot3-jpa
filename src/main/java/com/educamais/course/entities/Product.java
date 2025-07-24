@@ -14,7 +14,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+
+
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -96,7 +97,7 @@ public class Product implements Serializable{
 	}
 	
 	@JsonIgnore
-	public Set<Order> getOrder(){
+	public Set<Order> getOrders(){
 		Set<Order> set = new HashSet<>();
 		
 		for(OrderItem x : items) {
